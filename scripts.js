@@ -162,6 +162,17 @@ function loadSkills() {
     });
 }
 
+// Resume content
+const resumeContent = `
+    <iframe src="Myan_Gupta.pdf" class="resume-preview" title="Myan Gupta Resume"></iframe>
+    <a href="Myan_Gupta.pdf" class="download-button" download>Download Resume</a>
+`;
+
+// Function to load Resume section
+function loadResume() {
+    document.getElementById('resume-container').innerHTML = resumeContent;
+}
+
 // Form submit handler
 document.getElementById('contact-form').addEventListener('submit', function (e) {
     e.preventDefault();
@@ -176,4 +187,5 @@ document.addEventListener('DOMContentLoaded', () => {
     loadEducation();
     renderProjects();
     loadSkills();
+    loadResume();
 });
