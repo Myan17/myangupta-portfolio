@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myan Gupta - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Myan Gupta</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">Switch to Dark Mode</button>
+        </nav>
+    </header>
+
+    <section id="home" class="section" data-aos="fade-up">
+        <div class="hero">
+            <img src="profile.jpeg" alt="Myan Gupta" class="profile-image">
+            <h1>Hi, I'm <span class="highlight">Myan Gupta</span></h1>
+            <p>Driven Software Engineering intern candidate skilled in building efficient APIs, optimizing algorithms, and leveraging cloud platforms like AWS and Azure..</p>
+            <div class="social-icons">
+                <a href="mailto:gupta958@umn.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/myangupta" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Myan17" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section" data-aos="fade-right">
+        <h2>About Me</h2>
+        <div id="about-content">
+            <!-- About Me content will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <section id="education" class="section" data-aos="fade-left">
+        <h2>Education</h2>
+        <div id="education-content">
+            <!-- Education content will be dynamically loaded here -->
+        </div>
+    </section>
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <div id="skills-content" class="skills-container">
+            <!-- Skills content will be dynamically loaded here -->
+        </div>
+    </section>
+    
+
+    <section id="projects" class="section" data-aos="fade-up">
+        <h2>My Projects</h2>
+        <div id="project-container" class="project-container">
+            <!-- Dynamically rendered projects will appear here -->
+        </div>
+    </section>
+
+    <section id="contact" class="section" data-aos="zoom-in">
+        <h2>Contact Me</h2>
+        <p>If you'd like to connect, feel free to reach out via email or social media:</p>
+        <form id="contact-form">
+            <input type="text" placeholder="Your Name" id="name" required>
+            <input type="email" placeholder="Your Email" id="email" required>
+            <textarea placeholder="Your Message" id="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <div class="social-icons">
+            <a href="mailto:gupta958@umn.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+            <a href="https://linkedin.com/in/myangupta" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/myangupta" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </section>
+    
+
+    <footer>
+        <p>&copy; 2024 Myan Gupta. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="scripts.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

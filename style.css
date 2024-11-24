@@ -1,0 +1,392 @@
+/* Include Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* CSS Variables for Theme */
+:root {
+    --primary-color: #6a11cb;
+    --secondary-color: #2575fc;
+    --highlight-color: #ffd700;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --light-text-color: #555;
+    --card-background: #fff;
+    --box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    --border-radius: 10px;
+    --font-family: 'Poppins', sans-serif;
+}
+
+/* General Styles */
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+/* Header */
+header {
+    position: fixed;
+    width: 100%;
+    background: var(--primary-color);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+    transition: background-color 0.3s ease;
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+header ul li a:hover {
+    color: var(--highlight-color);
+}
+
+/* Home Section */
+#home {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+#home h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#home p {
+    font-size: 1.2rem;
+    max-width: 600px;
+}
+
+.cta-button {
+    margin-top: 2rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    color: white;
+    background-color: var(--highlight-color);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: white;
+    color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+/* Section Titles */
+.section h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--highlight-color);
+    margin: 1rem auto 0;
+    border-radius: var(--border-radius);
+}
+
+/* About Section */
+#about p {
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.1rem;
+    color: var(--light-text-color);
+    text-align: justify;
+}
+
+/* Education Section */
+#education-content div {
+    background: var(--card-background);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+    max-width: 700px;
+    text-align: left;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease;
+}
+
+#education-content div:hover {
+    transform: translateY(-5px);
+}
+
+/* Projects Section */
+#projects .project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--card-background);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    width: 300px;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+}
+
+.project-card ul {
+    margin: 0;
+    padding: 0 0 0 1.5rem;
+    list-style: square;
+    color: var(--light-text-color);
+}
+
+/* Contact Section */
+#contact input, #contact textarea {
+    width: 100%;
+    max-width: 600px;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 1px solid var(--light-text-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+}
+
+#contact button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    color: white;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#contact button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    header {
+        padding: 1rem;
+    }
+
+    #home h1 {
+        font-size: 2rem;
+    }
+
+    .project-card {
+        width: 90%;
+    }
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: var(--card-background);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    width: 90%;
+    max-width: 500px;
+    text-align: left;
+    box-shadow: var(--box-shadow);
+    color: var(--text-color);
+}
+
+.close-button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.close-button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Light/Dark Mode Toggle */
+.theme-toggle {
+    background: var(--highlight-color);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background: #222;
+    color: #eee;
+}
+
+body.dark-mode .modal-content {
+    background: #333;
+    color: #eee;
+}
+
+body.dark-mode .theme-toggle {
+    background: var(--secondary-color);
+    color: white;
+}
+
+/* Home Section - Profile Image */
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    color: white;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--highlight-color);
+}
+
+/* Project Images */
+.project-card img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+}
+
+/* Skills Section */
+#skills {
+    background: var(--background-color);
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skill-card {
+    background: var(--card-background);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    width: 300px;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.skill-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-card ul li {
+    font-size: 1rem;
+    color: var(--light-text-color);
+    margin: 0.5rem 0;
+}
